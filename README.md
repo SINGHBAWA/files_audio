@@ -40,7 +40,8 @@ Get Details of audio files
 ```
 
 
-*Used a better approach for sending file_type in url. So there a minor change in request data *
+*Used a better approach for sending file_type in url. So there a minor change in request data*
+
 Add Audio File
 ```
     POST:  /audio/<file_type>/
