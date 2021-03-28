@@ -18,9 +18,9 @@ follow the following step to setup
     python manage.py runserver 0:8000
 ```
 
-[https://filed-audio.herokuapp.com/audio/][API PATH]
 
-API paths: 
+
+API paths: hosted on(https://filed-audio.herokuapp.com/audio/)
 
 Get List of audio files
 
@@ -123,3 +123,6 @@ Update Audio File:
 
 
 ```
+
+
+[]: https://filed-audio.herokuapp.com/audio/
