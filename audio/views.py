@@ -20,11 +20,11 @@ class AudioViewMixin:
     def get_queryset(self, *args, **kwargs):
 
         file_type = self.kwargs['file_type']
-        if file_type not in dict(AudioFileTypeChoices.CHOICES):
-            raise Exception("Invalid File Type")
         queryset = self.model_map[file_type].objects.all()
         if file_type in AudioFileTypeChoices.NESTED_TYPES:
             queryset = queryset.select_related("audio_file")
+        else:
+            queryset = queryset.filter(file_type=file_type)
         return queryset
     
     def get_serializer_class(self, *args, **kwargs):
